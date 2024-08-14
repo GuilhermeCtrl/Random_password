@@ -1,42 +1,45 @@
-@font-face { font-family: Karla; src: url('fonts/Karla/Karla-Italic-VariableFont_wght.ttf'); }
+@font-face { 
+    font-family: Karla; 
+    src: url('fonts/Karla/Karla-Italic-VariableFont_wght.ttf'); 
+}
 
-body{
+body {
     background-color: #1F2937;
-    margin-left: 100px;
-    margin-top: 100px;
+    margin: 100px;
+    padding: 0;
+    font-family: Karla, sans-serif;
 }
 
-h1{
-    font-family: Karla;
+h1 {
     color: white;
-    font-size: 40pt;
-
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-align: left; /* Alinhar à esquerda */
 }
 
-div#subtitle{
+div#subtitle {
     color: white;
-    font-family: Karla;
-    font-size: 20pt;
+    font-size: 1.25em;
+    margin-bottom: 20px;
+    text-align: left; /* Alinhar à esquerda */
 }
 
-.generateButton{
+.generateButton {
     background-color: #10B981;
     border-radius: 10px;
-    outline: none;
-    font-size: 16pt;
-    font-family: Karla;
+    font-size: 1rem;
     color: white;
     height: 52px;
-    width: 240px;
-    margin-top: 40px;
-    outline: none;
+    width: 240px; /* Largura fixa */
+    margin-top: 20px;
+    display: inline-block; /* Para que o botão fique ao lado do input */
 }
 
-.green{
+.green {
     color: #55F991;
 }
 
-.caixa1{
+.caixa1, .caixa2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,81 +48,122 @@ div#subtitle{
     text-align: center;
     height: 52px;
     border-radius: 7px;
-    font-size: 16pt;
-   
+    font-size: 1.5rem;
+    margin: 10px 0;
 }
 
-.caixa2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #273549;
-    width: 396px;
-    text-align: center;
-    height: 52px;
-    border-radius: 7px;
-    font-size: 16pt;
-   
-}
-
-
-/*
-display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-*/
-
-
-.divCaixas{
+.divCaixa1, .divCaixa2 {
     display: flex;
     margin-top: 100px;
-    gap: 100pt;
+    gap: 10px; /* Espaço entre as caixas */
     color: #10B981;
-    position: absolute;
-    top: 50%;
 }
 
-.linhacolorida{
+.linhacolorida {
     margin-top: 35px;
-    margin-right: 850px;
+    margin-left: 0; 
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 850px; /* Limita a largura máxima */
+    height: 1px; 
+    background-color: #2F3E53; 
 }
 
-.botaoCopiar1{
+.botaoCopiar1, .botaoCopiar2 {
     background-color: #10B981;
     border-radius: 7px;
-    height: 40px;
+    height: 50px;
     color: white;
-    font-family: Karla;
-    font-size: 16px;
+    font-size: 1rem;
+    width: 240px; 
+    margin-top: 10px;
+    display: inline-block; /* Para alinhar os botões em linha */
 }
 
-.botaoCopiar2{
-    background-color: #10B981;
-    border-radius: 7px;
-    height: 40px;
-    color: white;
-    font-family: Karla;
-    font-size: 16px;
-}
-
-.divBotoesCopiar{
-    display: flex;
-    gap: 265pt;
-    color: #10B981;
-    position: absolute;
-
-}
-
-.quantSenha{
+.quantSenha {
     background-color: #ceded9;
     border-radius: 10px;
-    outline: none;
-    font-size: 16pt;
+    font-size: 1rem;
     width: 250px;
     height: 45px;
-    font-family: Karla;
-    color: black;
     padding-left: 30px;
+    margin-right: 20px; /* Espaço à direita para o botão */
+    display: inline-block;
 }
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    body {
+        margin: 20px; /* Reduzir a margem em telas menores */
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .generateButton, .botaoCopiar1, .botaoCopiar2 {
+        width: 100%;
+        max-width: 240px;
+    }
+    
+    .divCaixas, .divBotoesCopiar {
+        flex-direction: column;
+        align-items: flex-start; /* Manter alinhamento à esquerda em telas menores */
+    }
+    
+    .caixa1, .caixa2 {
+        width: 100%;
+    }
+}
+
+
+.divcheckBox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+}
+
+/* divisória para o botão de confirmação que não é meu kkkkkk*/
+
+.clear {
+    clear: both;
+  }
+  
+  .checkBox {
+    display: flex;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border: 3px solid rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 2px #fff;
+  }
+  
+  .checkBox div {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    top: -52px;
+    left: -52px;
+    position: absolute;
+    transform: rotateZ(45deg);
+    z-index: 100;
+  }
+  
+  .checkBox input[type=checkbox]:checked + div {
+    left: -10px;
+    top: -10px;
+  }
+  
+  .checkBox input[type=checkbox] {
+    position: absolute;
+    left: 50px;
+    visibility: hidden;
+  }
+  
+  .transition {
+    transition: 700ms ease;
+  }
+
