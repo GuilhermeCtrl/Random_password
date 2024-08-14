@@ -12,24 +12,38 @@
     </h1>
     <div id="subtitle">
         <p>Nunca mais utilize uma senha insegura.</p>
+
+        
+        <div class="divcheckBox">
+            <div class="content">
+                <label class="checkBox">
+                    <input class="content" id="ch1" type="checkbox" onclick="limitadorSenha()">
+                    <div class="transition"></div>
+                </label>
+            </div>
+            <P>Deseja que inclua números e simbolos?</P>
+        </div>
     </div>
     <input type="number" id="quantSenha" class="quantSenha" placeholder="Diga a largura da senha!">
     
-
-    <button class="generateButton" type="button" onclick="gerarSenha()">Crie uma senha nova</button>
-   
+    <button class="generateButton" type="button" onclick="gerarSenha()">Crie uma nova senha!</button>
+    
 
     <hr class="linhacolorida" color="#2F3E53">
-    <div class="divCaixas">
+    <div class="divBotoesCopiar">
+    </div>
+
+        <div class="divCaixa1">
             <p id="caixa1" class="caixa1"></p>
+                <button id="botaoCopiar1" class="botaoCopiar1" onclick="copiarTexto1()">Copiar senha!</button>
+        </div>
+
+
+        <div class="divCaixa2">
             <p id="caixa2" class="caixa2"></p>
+                <button id="botaoCopiar2" class="botaoCopiar2" onclick="copiarTexto2()">Copiar senha!</button>
         </div>
-
-        <div class="divBotoesCopiar">
-            <button id="botaoCopiar1" class="botaoCopiar1" onclick="copiarTexto1()">Copiar a primeira senha!</button>
-            <button id="botaoCopiar2" class="botaoCopiar2" onclick="copiarTexto2()">Copiar a segunda senha!</button>
-        </div>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
