@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>   
+        Crie uma senha<br><span class="green"> totalmente aleatória!</span>
+    </h1>
+    <div id="subtitle">
+        <p>Nunca mais utilize uma senha insegura.</p>
+    </div>
+    <input type="number" id="quantSenha" class="quantSenha" placeholder="Diga a largura da senha!">
+    
+
+    <button class="generateButton" type="button" onclick="gerarSenha()">Crie uma senha nova</button>
+   
+
+    <hr class="linhacolorida" color="#2F3E53">
+    <div class="divCaixas">
+            <p id="caixa1" class="caixa1"></p>
+            <p id="caixa2" class="caixa2"></p>
+        </div>
+
+        <div class="divBotoesCopiar">
+            <button id="botaoCopiar1" class="botaoCopiar1" onclick="copiarTexto1()">Copiar a primeira senha!</button>
+            <button id="botaoCopiar2" class="botaoCopiar2" onclick="copiarTexto2()">Copiar a segunda senha!</button>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

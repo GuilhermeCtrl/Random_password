@@ -1,0 +1,223 @@
+@font-face { font-family: Karla; src: url('fonts/Karla/Karla-Italic-VariableFont_wght.ttf'); }
+
+body{
+    background-color: #1F2937;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+h1{
+    font-family: Karla;
+    color: white;
+    font-size: 40pt;
+
+}
+
+div#subtitle{
+    color: white;
+    font-family: Karla;
+    font-size: 20pt;
+}
+
+.generateButton{
+    background-color: #10B981;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16pt;
+    font-family: Karla;
+    color: white;
+    height: 52px;
+    width: 240px;
+    margin-top: 40px;
+    outline: none;
+}
+
+.green{
+    color: #55F991;
+}
+
+.caixa1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #273549;
+    width: 396px;
+    text-align: center;
+    height: 52px;
+    border-radius: 7px;
+    font-size: 16pt;
+   
+}
+
+.caixa2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #273549;
+    width: 396px;
+    text-align: center;
+    height: 52px;
+    border-radius: 7px;
+    font-size: 16pt;
+   
+}
+
+
+/*
+display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+*/
+
+
+.divCaixas{
+    display: flex;
+    margin-top: 100px;
+    gap: 100pt;
+    color: #10B981;
+    position: absolute;
+    top: 50%;
+}
+
+.linhacolorida{
+    margin-top: 35px;
+    margin-right: 850px;
+}
+
+.botaoCopiar1{
+    background-color: #10B981;
+    border-radius: 7px;
+    height: 40px;
+    color: white;
+    font-family: Karla;
+    font-size: 16px;
+}
+
+.botaoCopiar2{
+    background-color: #10B981;
+    border-radius: 7px;
+    height: 40px;
+    color: white;
+    font-family: Karla;
+    font-size: 16px;
+}
+
+.divBotoesCopiar{
+    display: flex;
+    gap: 265pt;
+    color: #10B981;
+    position: absolute;
+
+}
+
+.quantSenha{
+    background-color: #ceded9;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16pt;
+    width: 250px;
+    height: 45px;
+    font-family: Karla;
+    color: black;
+    padding-left: 30px;
+}
+
+
+/* From Uiverse.io by mobinkakei */ 
+.toggler {
+    width: 72px;
+    margin-top: 5px;
+  }
+  
+  .toggler input {
+    display: none;
+  }
+  
+  .toggler label {
+    display: block;
+    position: relative;
+    width: 72px;
+    height: 36px;
+    border: 1px solid #d6d6d6;
+    border-radius: 36px;
+    background: #e4e8e8;
+    cursor: pointer;
+  }
+  
+  .toggler label::after {
+    display: block;
+    border-radius: 100%;
+    background-color: #d7062a;
+    content: '';
+    animation-name: toggler-size;
+    animation-duration: 0.15s;
+    animation-timing-function: ease-out;
+    animation-direction: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+  }
+  
+  .toggler label::after, .toggler label .toggler-on, .toggler label .toggler-off {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 26px;
+    height: 26px;
+    transform: translateY(-50%) translateX(-50%);
+    transition: left 0.15s ease-in-out, background-color 0.2s ease-out, width 0.15s ease-in-out, height 0.15s ease-in-out, opacity 0.15s ease-in-out;
+  }
+  
+  .toggler input:checked + label::after, .toggler input:checked + label .toggler-on, .toggler input:checked + label .toggler-off {
+    left: 75%;
+  }
+  
+  .toggler input:checked + label::after {
+    background-color: #50ac5d;
+    animation-name: toggler-size2;
+  }
+  
+  .toggler .toggler-on, .toggler .toggler-off {
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .toggler input:checked + label .toggler-off, .toggler input:not(:checked) + label .toggler-on {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  
+  .toggler .path {
+    fill: none;
+    stroke: #fefefe;
+    stroke-width: 7px;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+  }
+  
+  @keyframes toggler-size {
+    0%, 100% {
+      width: 26px;
+      height: 26px;
+    }
+  
+    50% {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  @keyframes toggler-size2 {
+    0%, 100% {
+      width: 26px;
+      height: 26px;
+    }
+  
+    50% {
+      width: 20px;
+      height: 20px;
+    }
+  }
+   
