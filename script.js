@@ -1,12 +1,20 @@
-const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
+const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
 let teste = document.getElementById("")
 
 let primeiraSenha = document.getElementById("caixa1") //a senha deve ter 15 digitos!
 let segundaSenha = document.getElementById("caixa2") //a senha deve ter 15 digitos!
-
 let quantCarac = document.getElementById("quantSenha")
+let checkLimitador = document.getElementById("ch1")
 
+function limitadorSenha(){
+    if (checkLimitador.checked){
+        characters.push("0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/");
+    }else{
+        for(let c = 0; c < 39; c++)
+        characters.pop("0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/");
+    }
+}
 
 function gerarSenha(){
     primeiraSenha.textContent = ""
@@ -28,8 +36,6 @@ function gerarSenha(){
             alert("Quantidade de caracteres ultrapassa o limite! Por favor, escolha uma senha entre 1 e 25!")
         }
     }
-
-    
 
 function copiarTexto1(){
      // Cria um elemento <textarea> temporário
@@ -68,7 +74,3 @@ function copiarTexto2(){
     // Remove o <textarea> temporário do documento
     document.body.removeChild(tempInput2);
 }
-
-
-
-
